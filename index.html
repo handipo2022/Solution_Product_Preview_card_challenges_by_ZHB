@@ -18,12 +18,12 @@
     <style>
       @font-face {
         font-family: MontserratFont;
-        src: url("./fonts/Montserrat/Montserrat-VariableFont_wght.ttf")
+        src: url("./Montserrat-VariableFont_wght.ttf")
           format("truetype");
       }
       @font-face {
         font-family: FrauncesFont;
-        src: url("./fonts/Fraunces/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf")
+        src: url("./Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf")
           format("truetype");
       }
       .attribution {
@@ -121,7 +121,7 @@
         justify-content: center;
         align-items: center;
       }
-      .add-cart-button:hover{
+      .add-cart-button:active{
         cursor:pointer;
         background-color: rgb(1, 38, 26);
       }
@@ -136,21 +136,33 @@
         margin-right:5px;
       }
       @media screen and (max-width: 400px) {
+        .main-container{
+          flex-direction: column;
+        }
         .right-card{
-          display: none;
+          border-bottom-right-radius: 10px;
+          border-bottom-left-radius: 10px;
+          border-top-left-radius: 0px;
+          border-top-right-radius: 0px;
+          width:220px;   
+          height:340px;
         }
         .img-card{
-          width:370px;
-          height:480px;
-          border-top-left-radius: 0; 
-          border-bottom-left-radius: 0;       
+          border-top-right-radius: 10px;
+          border-top-left-radius: 10px;
+          border-bottom-right-radius: 0px;
+          border-bottom-left-radius: 0px;
+          width:220px;   
+          height:280px;
+         
+
         }
       }
     </style>
   </head>
   <body>
     <div class="main-container">
-      <img class="img-card" src="./images/image-product-desktop.jpg" />
+      <img class="img-card" src="./image-product-desktop.jpg" />
       <div class="right-card">
         <div class="cat-text">P E R F U M E</div>
         <div class="brand-text" style="margin-top: 10px; margin-bottom: 15px">
